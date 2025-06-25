@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -54,7 +53,7 @@ const CompanionForm = () => {
     const companion = await createCompanion(values);
 
     if (companion) {
-      redirect(`/companions/${companion.id}`);
+      redirect(`/companions/ ${companion.id}`);
     } else {
       console.log("Failed to create a companion");
       redirect("/");
